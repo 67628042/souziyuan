@@ -253,8 +253,6 @@ class ResourceSearch(PluginBase):
                 )
             
             result_msg += "💡提示:点击链接即可获取资源\n\n"
-            result_msg += "微信免费追剧听歌教程\n"
-            result_msg += "cxuy7y0o6to.feishu.cn/docx/EiKYdW81joSjelxEWbTcZMvGnyd\n\n"
             result_msg += "没想要资源？请尝试：全网搜XX\n\n"
             result_msg += "大额流量卡19/月\nh5.gantanhao.com/url?value=akijF1744729274277\n"
             return result_msg
@@ -311,15 +309,13 @@ class ResourceSearch(PluginBase):
                 )
             
             result_msg += "🌐️资源来源网络，30分钟后删除，请及时转存\n\n"
-            result_msg += "微信免费追剧听歌教程\n"
-            result_msg += "cxuy7y0o6to.feishu.cn/docx/EiKYdW81joSjelxEWbTcZMvGnyd\n\n"
             result_msg += "⚠️搜剧指令：搜XXX\n\n"
             result_msg += "⚠️搜音乐指令：搜音乐XXX\n\n"
             result_msg += "大额流量卡19/月\nh5.gantanhao.com/url?value=akijF1744729274277\n"
             return result_msg
             
         except requests.exceptions.ReadTimeout:
-            return "🔍 全网搜索超时\n💡 提示：全网搜索需要更长时间，请稍后重试\n搜剧指令：搜XXX\n搜音乐指令：搜音乐XXX\n\n大额流量卡19/月\nhttp://h5.gantanhao.com/url?value=akijF1744729274277\n\n机器人使用文档https://cxuy7y0o6to.feishu.cn/docx/EiKYdW81joSjelxEWbTcZMvGnyd"
+            return "🔍 全网搜索超时\n💡 提示：全网搜索需要更长时间，请稍后重试"
         except Exception as e:
             logger.error(f"[ResourceSearch] 全网搜索失败: {e}")
-            return "🔍 全网搜索出错\n💡 提示：服务器可能繁忙，请稍后再试\n⚡ 建议：可以尝试使用普通搜索\n搜剧指令：搜XXX\n搜音乐指令：搜音乐XXX\n\n大额流量卡19/月\nhttp://h5.gantanhao.com/url?value=akijF1744729274277\n\n机器人使用文档https://cxuy7y0o6to.feishu.cn/docx/EiKYdW81joSjelxEWbTcZMvGnyd"
+            return "🔍 全网搜索出错\n💡 提示：服务器可能繁忙，请稍后再试\n⚡ 建议：可以尝试使用普通搜索"
